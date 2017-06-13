@@ -14,8 +14,10 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
+    // If I include polyfill in the js file, it shouldn't be here
+    // However, polyfill seems to be huge, so I would rather avoid using it
     files: [
-      'node_modules/babel-polyfill/dist/polyfill.js',
+      // 'node_modules/babel-polyfill/dist/polyfill.js',
       'src/*.js',
       'test/*.spec.js'
     ],

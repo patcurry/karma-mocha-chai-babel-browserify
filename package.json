@@ -4,6 +4,7 @@
   "description": "This is a front end javascript unit testing set up",
   "main": "index.js",
   "scripts": {
+    "build": "browserify src/smoke.js -t babelify -o dist/smoke.js",
     "test-mocha": "./node_modules/mocha/bin/mocha test/",
     "test-mocha-karma": "./node_modules/karma/bin/karma start karma.conf.js"
   },
@@ -37,6 +38,8 @@
     "watchify": "^3.9.0"
   },
   "browserify": {
-    "transform": ["babelify"]
+    "transform": [
+      "babelify"
+    ]
   }
 }
