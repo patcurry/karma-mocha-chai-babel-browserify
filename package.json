@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify src/smoke.js -t babelify -o dist/smoke.js",
-    "test-mocha": "./node_modules/mocha/bin/mocha test/",
+    "dev": "watchify src/smoke.js -t babelify -o dist/smoke.js",
     "test-mocha-karma": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
