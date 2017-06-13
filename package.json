@@ -1,0 +1,23 @@
+{
+  "name": "karma-mocha-chai-babel-browserify",
+  "version": "0.0.1",
+  "description": "This is a front end javascript unit testing set up",
+  "main": "index.js",
+  "scripts": {
+    "test-mocha": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patcurry/karma-mocha-chai-babel-browserify.git"
+  },
+  "author": "Pat Curry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patcurry/karma-mocha-chai-babel-browserify/issues"
+  },
+  "homepage": "https://github.com/patcurry/karma-mocha-chai-babel-browserify#readme",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
