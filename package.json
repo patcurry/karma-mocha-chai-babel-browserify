@@ -4,7 +4,8 @@
   "description": "This is a front end javascript unit testing set up",
   "main": "index.js",
   "scripts": {
-    "test-mocha": "./node_modules/mocha/bin/mocha"
+    "test-mocha": "./node_modules/mocha/bin/mocha src/test/",
+    "test-mocha-babel": "./node_modules/mocha/bin/mocha src/test/ --require babel-polyfill --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/patcurry/karma-mocha-chai-babel-browserify#readme",
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-register": "^6.24.1",
     "chai": "^4.0.2",
     "mocha": "^3.4.2"
   }
