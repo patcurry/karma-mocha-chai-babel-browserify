@@ -4,8 +4,8 @@
   "description": "This is a front end javascript unit testing set up",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/smoke.js -t babelify -o dist/smoke.js",
-    "dev": "watchify src/smoke.js -t babelify -o dist/smoke.js",
+    "build": "browserify src/leafletSmoke.js -t babelify -o dist/leafletSmoke.js",
+    "dev": "watchify src/leafletSmoke.js -t babelify -o dist/leafletSmoke.js",
     "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
@@ -39,5 +39,9 @@
     "transform": [
       "babelify"
     ]
+  },
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "leaflet": "^1.0.3"
   }
 }

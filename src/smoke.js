@@ -1,7 +1,7 @@
 // Without this line the tests will fail in firefox the Object.values() function
 // is not supported. That is unfortunate, but getting around it means that there
 // will be far less code for the browser to deal with... I think
-// import "babel-polyfill"
+import "babel-polyfill"
 
 const square = n => n * n
 const obj = {1: 'a', 2: 'b', 3: 'c', 4: 'd'}
