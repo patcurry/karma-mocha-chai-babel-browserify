@@ -12,7 +12,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['browserify', 'mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
@@ -41,6 +41,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'src/leafletSmoke.js': ['browserify'],
+      'test/create-dom.js': ['browserify'],
+      'test/*.spec.js': ['browserify']
+    },
+
+    browserify: {
+      debug: true,
+      transform: [ 'babelify' ]
     },
 
 
@@ -69,7 +77,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox', 'Opera'],
 
 
     // Continuous Integration mode
