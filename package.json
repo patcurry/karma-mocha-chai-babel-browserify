@@ -26,13 +26,15 @@
     "browserify": "^14.4.0",
     "chai": "^4.0.2",
     "karma": "^1.7.0",
-    "karma-chai": "^0.1.0",
-    "karma-mocha": "^1.3.0",
-    "mocha": "^3.4.2",
     "karma-browserify": "^5.1.1",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-firefox-launcher": "^1.0.1",
+    "karma-fixture": "^0.2.6",
+    "karma-html2js-preprocessor": "^1.1.0",
+    "karma-mocha": "^1.3.0",
     "karma-opera-launcher": "^1.0.0",
+    "mocha": "^3.4.2",
     "watchify": "^3.9.0"
   },
   "browserify": {

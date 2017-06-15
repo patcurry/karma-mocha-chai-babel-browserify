@@ -1,5 +1,7 @@
+// karma-mocha-chai-babel-browserify-leaflet
+
 // Karma configuration
-// Generated on Tue Jun 13 2017 13:59:02 GMT+0200 (CEST)
+// Generated on Thu Jun 15 2017 12:16:33 GMT+0200 (CEST)
 
 module.exports = function(config) {
   config.set({
@@ -10,15 +12,22 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['browserify', 'mocha', 'chai'],
+    frameworks: ['mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
-    // If I include polyfill in the js file, it shouldn't be here
-    // However, polyfill seems to be huge, so I would rather avoid using it
     files: [
-      // 'node_modules/babel-polyfill/dist/polyfill.js',
-      'src/*.js',
+      // create dom
+      'test/create-dom.js',
+
+      // dependencies
+      {pattern: 'node_modules/leaflet/dist/leaflet.css', watched: false},
+      {pattern: 'node_modules/leaflet/dist/leaflet.js', watched: false},
+
+      // my scripts
+      'src/leafletSmoke.js',
+
+      // test files
       'test/*.spec.js'
     ],
 
@@ -32,13 +41,6 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/*.js': ['browserify'],
-      'test/*.spec.js': ['browserify']
-    },
-
-    browserify: {
-      debug: true,
-      transform: ['babelify']
     },
 
 
@@ -67,7 +69,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'Opera'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
